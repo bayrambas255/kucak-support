@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kucak — Türkiye'nin bebek takip uygulaması. Destek, sıkça sorulan sorular ve iletişim." />
+  <meta name="theme-color" content="#FF8A7A" />
+  <title>Kucak · Destek</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%B1%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --brand: #FF8A7A;
+      --brand-soft: #FFD4CB;
+      --brand-dark: #D9604F;
+      --bg: #FFF8F5;
+      --surface: #FFFFFF;
+      --text: #2A2320;
+      --text-secondary: #6B5F58;
+      --text-tertiary: #A09590;
+      --divider: #F0E4DD;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 8px 24px rgba(217, 96, 79, 0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1A1614;
+        --surface: #251F1C;
+        --text: #F5EFEC;
+        --text-secondary: #B8ACA5;
+        --text-tertiary: #7A6F69;
+        --divider: #322924;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--brand-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid var(--divider);
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: white;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 32px 0 40px;
+    }
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 8px 24px rgba(217, 96, 79, 0.3);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+    }
+    .tagline {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    section { margin-top: 40px; }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 16px;
+      letter-spacing: -0.2px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+    }
+    .contact-row + .contact-row { border-top: 1px solid var(--divider); }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--brand-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .contact-text { display: flex; flex-direction: column; min-width: 0; }
+    .contact-label { font-size: 13px; color: var(--text-secondary); }
+    .contact-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      word-break: break-all;
+    }
+    .contact-value a { color: var(--text); }
+
+    details {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    details[open] { box-shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 12px 32px rgba(217, 96, 79, 0.1); }
+    summary {
+      padding: 18px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 22px;
+      color: var(--text-tertiary);
+      font-weight: 300;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    details > div {
+      padding: 0 20px 20px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+    details > div p:first-child { margin-top: 0; }
+    details > div p:last-child { margin-bottom: 0; }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--divider);
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 13px;
+    }
+    footer .links {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    footer .links a { color: var(--text-secondary); }
+
+    [lang="en"] { display: none; }
+    body.en [lang="tr"] { display: none; }
+    body.en [lang="en"] { display: block; }
+    body.en summary[lang="en"] { display: flex; }
+    body.en details > div[lang="en"] { display: block; }
+
+    @media (max-width: 480px) {
+      .container { padding: 20px 16px 60px; }
+      h1 { font-size: 26px; }
+      .card { padding: 20px; }
+      summary { padding: 16px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch" role="group" aria-label="Dil seçimi">
+      <button id="btn-tr" class="active" type="button" aria-pressed="true">Türkçe</button>
+      <button id="btn-en" type="button" aria-pressed="false">English</button>
+    </div>
+
+    <header class="hero">
+      <div class="logo" aria-hidden="true">🤱</div>
+      <h1>Kucak</h1>
+      <p class="tagline" lang="tr">Bebeğinizin günlük takibi için sıcak bir alan.</p>
+      <p class="tagline" lang="en">A warm space to track your baby's daily life.</p>
+    </header>
+
+    <section>
+      <h2 lang="tr">İletişim</h2>
+      <h2 lang="en">Contact</h2>
+      <div class="card">
+        <div class="contact-row">
+          <div class="contact-icon" aria-hidden="true">✉️</div>
+          <div class="contact-text">
+            <span class="contact-label" lang="tr">E-posta desteği</span>
+            <span class="contact-label" lang="en">Email support</span>
+            <span class="contact-value"><a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon" aria-hidden="true">⏱️</div>
+          <div class="contact-text">
+            <span class="contact-label" lang="tr">Yanıt süresi</span>
+            <span class="contact-label" lang="en">Response time</span>
+            <span class="contact-value" lang="tr">Hafta içi 1–2 iş günü</span>
+            <span class="contact-value" lang="en">Within 1–2 business days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 lang="tr">Sıkça Sorulan Sorular</h2>
+      <h2 lang="en">Frequently Asked Questions</h2>
+
+      <!-- TR FAQ -->
+      <div lang="tr">
+        <details>
+          <summary>Verilerim nerede saklanıyor?</summary>
+          <div>
+            <p>Tüm bebek bakım kayıtlarınız (beslenme, uyku, bez, büyüme, aşı vb.) cihazınızda yerel olarak saklanır. iCloud yedekleme açıksa Apple'ın şifreli iCloud altyapısıyla yedeklenir. Bilgileriniz reklam veya pazarlama için üçüncü taraflarla paylaşılmaz.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Hesabımı ve verilerimi nasıl silerim?</summary>
+          <div>
+            <p>Uygulama içinden <strong>Ayarlar → Verileri Sil</strong> seçeneğiyle tüm bebek profillerini ve kayıtları kalıcı olarak silebilirsiniz. iOS'tan uygulamayı kaldırmak da cihaz üzerindeki tüm verileri siler. iCloud yedeği varsa <em>Ayarlar → Apple ID → iCloud → Yedekleri Yönet</em> üzerinden silebilirsiniz.</p>
+            <p>Ek bir talep için <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a> adresine yazabilirsiniz; KVKK / GDPR kapsamında 30 gün içinde dönüş yaparız.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Aşı takvimi neden ABD'dekinden farklı?</summary>
+          <div>
+            <p>Kucak, T.C. Sağlık Bakanlığı Genişletilmiş Bağışıklama Programı (GBP) takvimini esas alır. ABD CDC takvimi ile aşı sayıları, dozları ve uygulama yaşları farklıdır. Uygulamadaki tarihler hekim önerisinin yerini tutmaz; doktorunuzun önerisi her zaman önceliklidir.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Aile üyeleriyle nasıl paylaşırım?</summary>
+          <div>
+            <p>Şu an iCloud üzerinden çoklu cihaz senkronu desteklenmektedir; aynı Apple Kimliği ile giriş yapan tüm cihazlarda kayıtlar paylaşılır. Eş veya bakıcı için ayrı hesapla paylaşım özelliği yol haritamızda; planlanan sürüm için <a href="mailto:bayrambas255@icloud.com">bize yazın</a>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Aboneliğimi nasıl iptal ederim?</summary>
+          <div>
+            <p>Abonelik Apple ID üzerinden yönetilir. <em>Ayarlar → [adınız] → Abonelikler → Kucak</em> yolundan dilediğiniz an iptal edebilirsiniz. İptal ettiğinizde mevcut dönem sonuna kadar premium özellikler aktif kalır; otomatik yenileme yapılmaz.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Satın aldığım abonelik geri yüklenmiyor</summary>
+          <div>
+            <p>Aynı Apple Kimliği ile giriş yaptığınızdan emin olun, ardından <strong>Ayarlar → Aboneliği Geri Yükle</strong> seçeneğine dokunun. Sorun devam ederse hesap e-postanız ve satın alma tarihiyle birlikte bize ulaşın.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Uygulama hangi cihazları destekliyor?</summary>
+          <div>
+            <p>Kucak, iOS 17.0 ve üzeri yüklü iPhone'larda çalışır. iPad ve Mac (Apple Silicon) desteği yol haritasındadır.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Kucak tıbbi tavsiye veriyor mu?</summary>
+          <div>
+            <p>Hayır. Kucak yalnızca bilgi takibi içindir; teşhis, tedavi veya tıbbi tavsiye yerine geçmez. Bebeğinizin sağlığıyla ilgili her durumda lütfen pediatristinize danışın.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Bir hata buldum / özellik önerim var</summary>
+          <div>
+            <p>Sevinerek dinleriz. <a href="mailto:bayrambas255@icloud.com?subject=Kucak%20Geri%20Bildirim">bayrambas255@icloud.com</a> adresine cihaz modeli, iOS sürümü ve mümkünse ekran görüntüsüyle birlikte yazın.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- EN FAQ -->
+      <div lang="en">
+        <details>
+          <summary>Where is my data stored?</summary>
+          <div>
+            <p>All baby care records are stored locally on your device. If iCloud backup is enabled, your data is backed up via Apple's encrypted iCloud infrastructure. We do not share your data with third parties for advertising or marketing.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I delete my account and data?</summary>
+          <div>
+            <p>Use <strong>Settings → Delete Data</strong> in the app to permanently remove all baby profiles and records. Removing the app from iOS also deletes all on-device data. For iCloud backups, manage them via <em>Settings → Apple ID → iCloud → Manage Backups</em>.</p>
+            <p>For additional requests under GDPR / KVKK, email <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a> and we'll respond within 30 days.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Why is the vaccine schedule different from the US?</summary>
+          <div>
+            <p>Kucak follows the Republic of Türkiye Ministry of Health Expanded Immunization Program. Doses, ages, and the number of vaccines differ from the US CDC schedule. The dates shown are not a substitute for your pediatrician's advice.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I share with family members?</summary>
+          <div>
+            <p>Multi-device sync via iCloud is supported — devices signed into the same Apple ID share records. Sharing with a separate account (partner or caregiver) is on the roadmap; <a href="mailto:bayrambas255@icloud.com">contact us</a> for the planned release.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I cancel my subscription?</summary>
+          <div>
+            <p>Subscriptions are managed via your Apple ID. Cancel anytime at <em>Settings → [your name] → Subscriptions → Kucak</em>. Premium features remain active until the end of the current period; no automatic renewal occurs after cancellation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>My subscription won't restore</summary>
+          <div>
+            <p>Make sure you're signed in with the same Apple ID, then tap <strong>Settings → Restore Purchases</strong>. If the issue persists, contact us with your account email and purchase date.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Which devices are supported?</summary>
+          <div>
+            <p>Kucak runs on iPhones with iOS 17.0 or later. iPad and Mac (Apple Silicon) support is on the roadmap.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does Kucak provide medical advice?</summary>
+          <div>
+            <p>No. Kucak is for tracking purposes only and is not a substitute for diagnosis, treatment, or medical advice. Always consult your pediatrician about your baby's health.</p>
+          </div>
+        </details>
+        <details>
+          <summary>I found a bug / I have a feature request</summary>
+          <div>
+            <p>We'd love to hear it. Email <a href="mailto:bayrambas255@icloud.com?subject=Kucak%20Feedback">bayrambas255@icloud.com</a> with your device model, iOS version, and a screenshot if possible.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="privacy.html" lang="tr">Gizlilik Politikası</a>
+        <a href="privacy.html" lang="en">Privacy Policy</a>
+        <a href="terms.html" lang="tr">Kullanım Şartları</a>
+        <a href="terms.html" lang="en">Terms of Use</a>
+      </div>
+      <div lang="tr">© <span id="year">2026</span> Kucak. Tüm hakları saklıdır.</div>
+      <div lang="en">© <span>2026</span> Kucak. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var btnTr = document.getElementById('btn-tr');
+      var btnEn = document.getElementById('btn-en');
+      var body = document.body;
+
+      function setLang(lang) {
+        if (lang === 'en') {
+          body.classList.add('en');
+          btnEn.classList.add('active'); btnEn.setAttribute('aria-pressed', 'true');
+          btnTr.classList.remove('active'); btnTr.setAttribute('aria-pressed', 'false');
+          document.documentElement.lang = 'en';
+        } else {
+          body.classList.remove('en');
+          btnTr.classList.add('active'); btnTr.setAttribute('aria-pressed', 'true');
+          btnEn.classList.remove('active'); btnEn.setAttribute('aria-pressed', 'false');
+          document.documentElement.lang = 'tr';
+        }
+        try { localStorage.setItem('kucak-support-lang', lang); } catch (e) {}
+      }
+
+      btnTr.addEventListener('click', function () { setLang('tr'); });
+      btnEn.addEventListener('click', function () { setLang('en'); });
+
+      var saved;
+      try { saved = localStorage.getItem('kucak-support-lang'); } catch (e) {}
+      if (saved) {
+        setLang(saved);
+      } else if ((navigator.language || '').toLowerCase().indexOf('tr') !== 0) {
+        setLang('en');
+      }
+
+      document.querySelectorAll('#year, footer span').forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+      });
+    })();
+  </script>
+</body>
+</html>

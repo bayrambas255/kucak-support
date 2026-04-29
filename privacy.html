@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kucak Gizlilik Politikası — KVKK ve Apple App Store gereksinimleriyle uyumlu." />
+  <meta name="theme-color" content="#FF8A7A" />
+  <title>Kucak · Gizlilik Politikası</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%B1%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --brand: #FF8A7A;
+      --brand-soft: #FFD4CB;
+      --brand-dark: #D9604F;
+      --success: #4CAF93;
+      --bg: #FFF8F5;
+      --surface: #FFFFFF;
+      --text: #2A2320;
+      --text-secondary: #6B5F58;
+      --text-tertiary: #A09590;
+      --divider: #F0E4DD;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 8px 24px rgba(217, 96, 79, 0.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1A1614;
+        --surface: #251F1C;
+        --text: #F5EFEC;
+        --text-secondary: #B8ACA5;
+        --text-tertiary: #7A6F69;
+        --divider: #322924;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+    }
+    .breadcrumb a { color: var(--text-secondary); }
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      letter-spacing: -0.4px;
+    }
+    .last-updated {
+      color: var(--text-tertiary);
+      font-size: 13px;
+      margin: 0 0 28px;
+    }
+    .summary {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: rgba(76, 175, 147, 0.08);
+      border: 1px solid rgba(76, 175, 147, 0.25);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 32px;
+    }
+    .summary-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(76, 175, 147, 0.18);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .summary strong {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .summary span {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    section { margin-bottom: 28px; }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: var(--text);
+      letter-spacing: -0.1px;
+    }
+    p, ul { color: var(--text-secondary); font-size: 15px; margin: 0 0 10px; }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 4px; }
+    p:last-child, ul:last-child { margin-bottom: 0; }
+    strong { color: var(--text); font-weight: 600; }
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--divider);
+      text-align: center;
+      color: var(--text-tertiary);
+      font-size: 13px;
+    }
+    footer .links {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    footer .links a { color: var(--text-secondary); }
+    @media (max-width: 480px) {
+      .container { padding: 20px 16px 60px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">← Destek</a></div>
+    <h1>Gizlilik Politikası</h1>
+    <p class="last-updated">Son güncelleme: 22 Nisan 2026</p>
+
+    <div class="summary">
+      <div class="summary-icon" aria-hidden="true">🔒</div>
+      <div>
+        <strong>Kısa Özet</strong>
+        <span>Kucak, bebeğinize ait tüm verileri yalnızca cihazınızda ve kendi iCloud hesabınızda saklar. Hiçbir veri bize gönderilmez. Reklam, tracker ve analitik yoktur.</span>
+      </div>
+    </div>
+
+    <section>
+      <h2>1. Kim Olduğumuz</h2>
+      <p>Kucak uygulamasını Bayram Baş geliştirmektedir.</p>
+      <p>İletişim: <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></p>
+    </section>
+
+    <section>
+      <h2>2. Neyi, Nerede Saklarız</h2>
+      <p>Uygulamaya elle girdiğiniz tüm bilgiler — bebeğin adı, doğum tarihi, beslenme, uyku, bez, büyüme ölçümleri, aşı, ilaç, fotoğraflar ve hatıralar — yalnızca şu iki yerde tutulur:</p>
+      <ul>
+        <li><strong>Cihazınızda:</strong> Apple SwiftData / SQLite depolama, iOS Data Protection ile şifrelenir.</li>
+        <li><strong>iCloud hesabınızda (açıksa):</strong> Apple'ın private CloudKit veritabanı. Bu veriye Apple bile düz metin olarak erişemez; yalnızca sizin Apple ID'niz açabilir.</li>
+      </ul>
+      <p>Bizim sunucumuz yoktur. Kucak'in arka uç (backend) altyapısı bulunmaz. Verileriniz bize gönderilmez, biz tarafından saklanmaz ve görülmez.</p>
+    </section>
+
+    <section>
+      <h2>3. Neyi Toplamayız</h2>
+      <p>Aşağıdakilerin hiçbirini toplamayız:</p>
+      <ul>
+        <li>Ad, soyad, e-posta, telefon (Apple ID bile değil)</li>
+        <li>Konum, IP, cihaz kimliği (IDFA / IDFV)</li>
+        <li>Davranış analitiği (Firebase, Google Analytics, Facebook SDK yoktur)</li>
+        <li>Crash raporu (üçüncü taraf servislere gönderilmez)</li>
+        <li>HealthKit, Takvim, Rehber verileri</li>
+        <li>Reklam takibi — uygulamada reklam yoktur</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Ne Kullanıyoruz</h2>
+      <p>Üçüncü taraf olarak yalnızca Apple hizmetleri devrededir:</p>
+      <ul>
+        <li><strong>Apple iCloud (CloudKit)</strong> — cihazlar arası eşleme, kendi hesabınızda</li>
+        <li><strong>Apple App Store / StoreKit</strong> — Premium aboneliği için ödeme işleme (ödeme bilgilerine biz erişmeyiz)</li>
+        <li><strong>Apple Bildirim Servisi</strong> — hatırlatıcılar için</li>
+      </ul>
+      <p>Apple gizlilik politikası: <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></p>
+    </section>
+
+    <section>
+      <h2>5. Fotoğraflar</h2>
+      <p>Hatıra albümü ve bebek avatarı için fotoğraf seçmenize izin verilir. Seçtiğiniz fotoğraf yalnızca uygulama veritabanına eklenir — başka bir yere gönderilmez. Tüm fotoğraflar cihazınızda ve (varsa) kendi iCloud'unuzda kalır.</p>
+    </section>
+
+    <section>
+      <h2>6. Verilerinizi Silme</h2>
+      <p>Uygulama içinden bir bebeği sildiğinizde, ilgili tüm kayıtlar (beslenme, uyku, ölçümler, fotoğraflar) cihazınızdan ve iCloud'unuzdan kalıcı olarak silinir.</p>
+      <p>Uygulamayı cihazdan kaldırırsanız yerel veri silinir. iCloud verisi için: <em>Ayarlar → Apple ID → iCloud → Kucak → Verileri Sil</em>.</p>
+    </section>
+
+    <section>
+      <h2>7. Çocuklar ve Sağlık Verisi</h2>
+      <p>Kucak, bebeğinizi takip etmeniz için veli ve vasilerce kullanılır. Uygulamanın birincil kullanıcısı yetişkindir (18 yaş ve üzeri).</p>
+      <p>Bebeğe ait sağlık nitelikli kayıtlar (büyüme ölçümleri, aşı, ilaç) KVKK madde 6 anlamında özel nitelikli veridir. Ancak bu veriler yalnızca sizin cihazınızda ve iCloud'unuzda tutulur; bize iletilmez.</p>
+      <p>Kucak tıbbi bir cihaz değildir ve hekim tavsiyesi yerine geçmez. Aşı takvimi ve WHO büyüme eğrileri kamuya açık tıbbi referanslardır.</p>
+    </section>
+
+    <section>
+      <h2>8. Haklarınız (KVKK md. 11)</h2>
+      <p>Veriniz bizde tutulmadığı için klasik erişim ve silme talepleri uygulamayı açıp doğrudan kendiniz yapabilirsiniz:</p>
+      <ul>
+        <li><strong>Görüntüleme:</strong> uygulama içi tüm ekranlarda</li>
+        <li><strong>Düzeltme:</strong> her kayıt üzerinde düzenle butonu bulunur</li>
+        <li><strong>Silme:</strong> her kayıt, her bebek, her fotoğraf silinebilir</li>
+        <li><strong>Taşınabilirlik:</strong> Ayarlar → Verileri dışa aktar (CSV)</li>
+      </ul>
+      <p>Bir sorunuz varsa <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a> adresine yazabilirsiniz. Talepleriniz 30 gün içinde yanıtlanır.</p>
+      <p>Memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na başvurma hakkınız saklıdır: <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">kvkk.gov.tr</a></p>
+    </section>
+
+    <section>
+      <h2>9. Reklam Yok, Tracking Yok</h2>
+      <p>Kucak'te reklam yoktur. Reklam takip tanımlayıcısı (IDFA) kullanılmaz. Hiçbir kullanıcı davranışı ölçülmez ve raporlanmaz.</p>
+    </section>
+
+    <section>
+      <h2>10. Değişiklikler</h2>
+      <p>Politika güncellendiğinde bu sayfadaki son güncelleme tarihi değişir. Önemli değişikliklerde uygulama içi bildirim yapılır.</p>
+    </section>
+
+    <section>
+      <h2>11. İletişim</h2>
+      <p>E-posta: <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></p>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="index.html">Destek</a>
+        <a href="terms.html">Kullanım Şartları</a>
+      </div>
+      <div>© <span id="year">2026</span> Kucak. Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
