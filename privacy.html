@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kucak Gizlilik Politikası — KVKK ve Apple App Store gereksinimleriyle uyumlu." />
-  <meta name="theme-color" content="#FF8A7A" />
+  <meta name="description" content="Kucak Gizlilik Politikası: kayıtların saklanması, iCloud, fotoğraflar, paylaşım, izinler ve veri silme." />
+  <meta name="theme-color" content="#FAF7F4" />
   <title>Kucak · Gizlilik Politikası</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%B1%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="assets/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
   <style>
     :root {
-      --brand: #FF8A7A;
+      --brand: #C4483E;
       --brand-soft: #FFD4CB;
-      --brand-dark: #D9604F;
+      --brand-dark: #B94439;
       --success: #4CAF93;
-      --bg: #FFF8F5;
-      --surface: #FFFFFF;
-      --text: #2A2320;
-      --text-secondary: #6B5F58;
-      --text-tertiary: #A09590;
-      --divider: #F0E4DD;
+      --bg: #FAF7F4;
+      --surface: #FFFDFC;
+      --text: #211C1A;
+      --text-secondary: #6D645F;
+      --text-tertiary: #756B65;
+      --divider: #E5DED9;
       --radius: 16px;
       --radius-lg: 24px;
       --shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 8px 24px rgba(217, 96, 79, 0.06);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1A1614;
-        --surface: #251F1C;
-        --text: #F5EFEC;
-        --text-secondary: #B8ACA5;
-        --text-tertiary: #7A6F69;
-        --divider: #322924;
+        --brand: #FF9A8D;
+        --brand-dark: #FF9A8D;
+        --bg: #0F0D0C;
+        --surface: #171412;
+        --text: #F7F2EE;
+        --text-secondary: #C7BDB7;
+        --text-tertiary: #978D87;
+        --divider: #3B3531;
         --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
       }
     }
@@ -42,10 +45,16 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+      overflow-wrap: anywhere;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--brand-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
     .container {
       max-width: 720px;
       margin: 0 auto;
@@ -136,103 +145,101 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <div class="breadcrumb"><a href="index.html">← Destek</a></div>
     <h1>Gizlilik Politikası</h1>
-    <p class="last-updated">Son güncelleme: 22 Nisan 2026</p>
+    <p class="last-updated">Son güncelleme: 18 Ekim 2026</p>
 
     <div class="summary">
       <div class="summary-icon" aria-hidden="true">🔒</div>
       <div>
         <strong>Kısa Özet</strong>
-        <span>Kucak, bebeğinize ait tüm verileri yalnızca cihazınızda ve kendi iCloud hesabınızda saklar. Hiçbir veri bize gönderilmez. Reklam, tracker ve analitik yoktur.</span>
+        <span>Kucak bakım kayıtlarınızı cihazınızda ve iCloud eşitlemesi açıksa kendi iCloud hesabınızda saklar; geliştiriciye otomatik olarak göndermez. Paylaşım ve dışa aktarma sizin seçiminizle yapılır. Reklam ve üçüncü taraf izleme SDK&#x27;sı kullanılmaz.</span>
       </div>
     </div>
 
     <section>
-      <h2>1. Kim Olduğumuz</h2>
-      <p>Kucak uygulamasını Bayram Baş geliştirmektedir.</p>
+      <h2>1. Kapsam ve İletişim</h2>
+      <p>Kucak uygulamasını Bayram Baş geliştirmektedir. Bu politika uygulamadaki kayıtları, destek iletişimini ve destek web sitesini kapsar.</p>
       <p>İletişim: <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></p>
     </section>
 
     <section>
-      <h2>2. Neyi, Nerede Saklarız</h2>
-      <p>Uygulamaya elle girdiğiniz tüm bilgiler — bebeğin adı, doğum tarihi, beslenme, uyku, bez, büyüme ölçümleri, aşı, ilaç, fotoğraflar ve hatıralar — yalnızca şu iki yerde tutulur:</p>
-      <ul>
-        <li><strong>Cihazınızda:</strong> Apple SwiftData / SQLite depolama, iOS Data Protection ile şifrelenir.</li>
-        <li><strong>iCloud hesabınızda (açıksa):</strong> Apple'ın private CloudKit veritabanı. Bu veriye Apple bile düz metin olarak erişemez; yalnızca sizin Apple ID'niz açabilir.</li>
-      </ul>
-      <p>Bizim sunucumuz yoktur. Kucak'in arka uç (backend) altyapısı bulunmaz. Verileriniz bize gönderilmez, biz tarafından saklanmaz ve görülmez.</p>
+      <h2>2. Uygulamada Saklanan Bilgiler</h2>
+      <p>Girdiğiniz bilgilere göre bebek adı, doğum tarihi, cinsiyet, doğum ölçümleri ve gebelik haftası; beslenme, emzirme ve sağım süreleri, miktarlar ve besin adları; uyku, bez, kilo, boy ve baş çevresi; aşı planı, ilaç planı ve doz geçmişi; ek gıda denemeleri ve reaksiyon notları; gelişim adımları, hatıralar, fotoğraflar ve serbest notlar saklanır.</p>
+      <p>Bu bilgiler günlük takip, grafikler, yaşa göre içerikler, özetler ve hatırlatıcılar için kullanılır. Görünüm, bildirim tercihleri ve seçili bebek bilgisi gibi ayarlar da cihazda tutulur.</p>
     </section>
 
     <section>
-      <h2>3. Neyi Toplamayız</h2>
-      <p>Aşağıdakilerin hiçbirini toplamayız:</p>
-      <ul>
-        <li>Ad, soyad, e-posta, telefon (Apple ID bile değil)</li>
-        <li>Konum, IP, cihaz kimliği (IDFA / IDFV)</li>
-        <li>Davranış analitiği (Firebase, Google Analytics, Facebook SDK yoktur)</li>
-        <li>Crash raporu (üçüncü taraf servislere gönderilmez)</li>
-        <li>HealthKit, Takvim, Rehber verileri</li>
-        <li>Reklam takibi — uygulamada reklam yoktur</li>
-      </ul>
+      <h2>3. Cihazda Saklama ve iCloud</h2>
+      <p>Kayıtlar cihazdaki uygulama deposunda tutulur ve iOS&#x27;un veri koruma mekanizmalarından yararlanır. iCloud kullanılabilir ve Kucak için eşitleme açıksa kayıtlar Apple CloudKit aracılığıyla kendi Apple hesabınızın özel veritabanına eşitlenir.</p>
+      <p>Kucak&#x27;ın geliştirici tarafından işletilen bir kayıt sunucusu yoktur; bakım kayıtları geliştiriciye otomatik gönderilmez. iCloud verileri aktarım sırasında ve Apple sunucularında şifrelenir. Tüm kayıt alanları için uçtan uca şifreleme garantisi vermeyiz.</p>
+      <p>iCloud kullanımını iPhone Ayarları&#x27;ndaki Apple Hesabı → iCloud bölümünden yönetebilirsiniz. Eşitlemeyi kapatmak daha önce iCloud&#x27;a aktarılmış kopyaları kendiliğinden silmez. Mevcut sürümde başka bir bakım verene ortak profil davetiyle erişim verme özelliği açık değildir.</p>
     </section>
 
     <section>
-      <h2>4. Ne Kullanıyoruz</h2>
-      <p>Üçüncü taraf olarak yalnızca Apple hizmetleri devrededir:</p>
-      <ul>
-        <li><strong>Apple iCloud (CloudKit)</strong> — cihazlar arası eşleme, kendi hesabınızda</li>
-        <li><strong>Apple App Store / StoreKit</strong> — Premium aboneliği için ödeme işleme (ödeme bilgilerine biz erişmeyiz)</li>
-        <li><strong>Apple Bildirim Servisi</strong> — hatırlatıcılar için</li>
-      </ul>
-      <p>Apple gizlilik politikası: <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></p>
+      <h2>4. Cihaz İçi Hesaplamalar ve İzleme</h2>
+      <p>Uyku penceresi, büyüme persentilleri ve haftalık karşılaştırmalar cihazda hesaplanır. Uygulama reklam, reklam kimliğiyle takip veya üçüncü taraf analitik ve hata raporlama SDK&#x27;sı kullanmaz; kullanım analitiğini geliştiricinin sunucusuna göndermez.</p>
+      <p>Yorum istemini uygun zamanda göstermek için ilk kullanım, son istem tarihi ve sürüm gibi bilgiler cihazda tutulur; kayıt ve aktif gün sayıları cihazda değerlendirilir. Kucak konum, Rehber, Takvim veya HealthKit verilerine erişim istemez. Apple&#x27;ın sistem tanılama ve App Store hizmetleri kendi gizlilik koşullarına tabidir.</p>
     </section>
 
     <section>
-      <h2>5. Fotoğraflar</h2>
-      <p>Hatıra albümü ve bebek avatarı için fotoğraf seçmenize izin verilir. Seçtiğiniz fotoğraf yalnızca uygulama veritabanına eklenir — başka bir yere gönderilmez. Tüm fotoğraflar cihazınızda ve (varsa) kendi iCloud'unuzda kalır.</p>
+      <h2>5. Apple Hizmetleri ve Satın Alımlar</h2>
+      <p>iCloud eşitlemesi için CloudKit, abonelik satın alma ve geri yükleme için App Store / StoreKit kullanılır. Abonelik erişimi StoreKit işlem ve hak bilgileriyle cihazda doğrulanır. Kart numarası ve ödeme bilgileri geliştiriciye ulaşmaz.</p>
+      <p>Apple hizmetlerinin veri işleme ve saklama koşulları için: <a href="https://www.apple.com/legal/privacy/tr/">https://www.apple.com/legal/privacy/tr/</a></p>
     </section>
 
     <section>
-      <h2>6. Verilerinizi Silme</h2>
-      <p>Uygulama içinden bir bebeği sildiğinizde, ilgili tüm kayıtlar (beslenme, uyku, ölçümler, fotoğraflar) cihazınızdan ve iCloud'unuzdan kalıcı olarak silinir.</p>
-      <p>Uygulamayı cihazdan kaldırırsanız yerel veri silinir. iCloud verisi için: <em>Ayarlar → Apple ID → iCloud → Kucak → Verileri Sil</em>.</p>
+      <h2>6. Fotoğraflar ve İzinler</h2>
+      <p>Bebek profili, gelişim kaydı veya hatıraya eklediğiniz fotoğraflar uygulama verisinin parçasıdır; cihazda ve eşitleme açıksa kendi iCloud hesabınızda saklanır. Sistem fotoğraf seçicisi kullanılır; uygulama yalnızca seçtiğiniz fotoğraflara erişir.</p>
+      <p>Paylaşım kartına seçtiğiniz fotoğraf kartı hazırlamak için bellekte işlenir; ayrıca hatıra albümüne kaydedilmez. Paylaşım için oluşturulan kart dosyası bu fotoğrafın görüntüsünü içerebilir. PNG kartına kaynak fotoğrafın EXIF, konum ve çekim tarihi bilgileri eklenmez.</p>
+      <p>Kartı Fotoğraflar&#x27;a kaydetmek istediğinizde yalnızca ekleme izni istenir; bu izin arşivdeki diğer fotoğrafları okuma yetkisi vermez. İzni iOS Ayarları&#x27;ndan değiştirebilirsiniz.</p>
     </section>
 
     <section>
-      <h2>7. Çocuklar ve Sağlık Verisi</h2>
-      <p>Kucak, bebeğinizi takip etmeniz için veli ve vasilerce kullanılır. Uygulamanın birincil kullanıcısı yetişkindir (18 yaş ve üzeri).</p>
-      <p>Bebeğe ait sağlık nitelikli kayıtlar (büyüme ölçümleri, aşı, ilaç) KVKK madde 6 anlamında özel nitelikli veridir. Ancak bu veriler yalnızca sizin cihazınızda ve iCloud'unuzda tutulur; bize iletilmez.</p>
-      <p>Kucak tıbbi bir cihaz değildir ve hekim tavsiyesi yerine geçmez. Aşı takvimi ve WHO büyüme eğrileri kamuya açık tıbbi referanslardır.</p>
+      <h2>7. Bildirimler, Widget ve Canlı Etkinlik</h2>
+      <p>Hatırlatıcılar izin vermeniz halinde cihazda yerel olarak planlanır. Bildirimler bebek adı, ilaç veya aşı adı gibi bakım bilgilerini içerebilir. Bildirim türlerini Kucak Ayarlar → Bildirim tercihleri ekranından, izin ve önizlemeleri iOS Ayarları&#x27;ndan yönetebilirsiniz.</p>
+      <p>Widget aynı cihazdaki ortak uygulama deposundan bebek adı, son beslenme, bez ve uyku bilgilerini okur. Emzirme Canlı Etkinliği bebek adı, emzirilen taraf ve süreleri Kilit Ekranı ve Dynamic Island&#x27;da gösterebilir. Bu bilgiler ekranınızı gören kişilerce görülebilir; widget&#x27;ları kaldırabilir, Canlı Etkinlik ve kilit ekranı görünürlüğünü iOS ayarlarından yönetebilirsiniz.</p>
     </section>
 
     <section>
-      <h2>8. Haklarınız (KVKK md. 11)</h2>
-      <p>Veriniz bizde tutulmadığı için klasik erişim ve silme talepleri uygulamayı açıp doğrudan kendiniz yapabilirsiniz:</p>
-      <ul>
-        <li><strong>Görüntüleme:</strong> uygulama içi tüm ekranlarda</li>
-        <li><strong>Düzeltme:</strong> her kayıt üzerinde düzenle butonu bulunur</li>
-        <li><strong>Silme:</strong> her kayıt, her bebek, her fotoğraf silinebilir</li>
-        <li><strong>Taşınabilirlik:</strong> Ayarlar → Verileri dışa aktar (CSV)</li>
-      </ul>
-      <p>Bir sorunuz varsa <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a> adresine yazabilirsiniz. Talepleriniz 30 gün içinde yanıtlanır.</p>
-      <p>Memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na başvurma hakkınız saklıdır: <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">kvkk.gov.tr</a></p>
+      <h2>8. Paylaşım, CSV ve PDF</h2>
+      <p>CSV dosyaları, doktor görüşmesi için PDF özet ve PNG paylaşım kartları cihazda hazırlanır. Yalnızca sizin başlattığınız paylaşım, Fotoğraflar&#x27;a kaydetme veya AirPrint işlemiyle seçtiğiniz uygulamaya, kişiye, depolama alanına ya da yazıcıya aktarılır. Alıcı hizmetlerin kendi gizlilik ve saklama koşulları geçerlidir.</p>
+      <p>Paylaşmadan önce kart türüne göre sunulan ad, fotoğraf, tarih ve imza seçeneklerini kontrol edin; kartta görünen ölçüm ve özetleri de gözden geçirin. CSV ve PDF dosyaları bakım kayıtlarını içerebilir; dosya adında bebek adı bulunabilir.</p>
+      <p>Ayarlar → CSV dışa aktar, seçili bebeğin beslenme, bez, uyku, büyüme, aşı, ilaç dozu, tamamlanmış gelişim adımı ve ek gıda kayıtlarını içerir. Fotoğraf, hatıra albümü veya tüm profilin eksiksiz yedeği değildir; uygulamada CSV&#x27;den geri yükleme özelliği yoktur.</p>
+      <p>CSV ve PDF cihazın geçici dosya alanına yazılır. Paylaşım kartlarının geçici PNG dosyaları paylaşım tamamlandığında veya iptal edildiğinde ve sonraki açılışta temizlenir. Kaydettiğiniz veya başkalarına gönderdiğiniz kopyalar bu temizlikten etkilenmez.</p>
     </section>
 
     <section>
-      <h2>9. Reklam Yok, Tracking Yok</h2>
-      <p>Kucak'te reklam yoktur. Reklam takip tanımlayıcısı (IDFA) kullanılmaz. Hiçbir kullanıcı davranışı ölçülmez ve raporlanmaz.</p>
+      <h2>9. Saklama Süresi ve Silme</h2>
+      <p>Bakım kayıtları siz silene kadar cihazdaki uygulama deposunda ve eşitleme açıksa kendi iCloud hesabınızda tutulur. Bir bebek profilini silmek o profile bağlı kayıtları da siler. Tüm kayıtlar için Ayarlar → Gizlilik ve veri → Tüm verileri sil yolunu kullanabilirsiniz.</p>
+      <p>iCloud kullanılabilir ve eşitleme açıksa silme işlemi iCloud&#x27;a ve diğer cihazlarınıza eşitleme yoluyla yansır; bağlantı ve eşitleme durumuna göre zaman alabilir. iCloud kullanılamıyorsa seçenek Bu cihazdaki verileri sil olarak görünür; daha önce iCloud&#x27;a eşitlenmiş kopyaların silindiği garanti edilmez. Bu kopyaları da silmek için iCloud erişimini yeniden sağlayıp eşitleme durumunu kontrol edin.</p>
+      <p>Uygulamayı kaldırmak iCloud verilerini veya daha önce dışa aktardığınız dosyaları silmez. Fotoğraflar, Dosyalar, e-posta veya alıcı hizmetlerdeki kopyaları ayrıca yönetmelisiniz. Veri silme veya uygulamayı kaldırma Premium aboneliğini iptal etmez.</p>
     </section>
 
     <section>
-      <h2>10. Değişiklikler</h2>
-      <p>Politika güncellendiğinde bu sayfadaki son güncelleme tarihi değişir. Önemli değişikliklerde uygulama içi bildirim yapılır.</p>
+      <h2>10. Çocuklara Ait ve Sağlıkla İlgili Kayıtlar</h2>
+      <p>Kucak ebeveyn, veli ve yetişkin bakım verenlerin kullanımı içindir; çocukların doğrudan hesap açması için tasarlanmamıştır. Ayrı bir Kucak hesabı veya giriş zorunluluğu yoktur.</p>
+      <p>Bebeğe ait sağlık bilgileri özel nitelikli kişisel veri içerebilir. Yalnızca kaydetmeye yetkili olduğunuz bilgileri girin; paylaşım ve destek yazışmalarında gereksiz sağlık bilgileri göndermeyin. Kucak tıbbi cihaz değildir; kayıtlar, içerikler ve tahminler tanı veya tedavi yerine geçmez.</p>
     </section>
 
     <section>
-      <h2>11. İletişim</h2>
-      <p>E-posta: <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></p>
+      <h2>11. Destek İçin Gönderdiğiniz Bilgiler</h2>
+      <p>Bize e-posta gönderirseniz e-posta adresiniz, mesajınız ve eklemeyi seçtiğiniz dosyalar geliştiriciye ulaşır. Bunlar destek talebini yanıtlamak ve takip etmek amacıyla e-posta hizmeti üzerinden işlenir; uygulamadaki bakım kayıtlarına otomatik erişim sağlamaz.</p>
+      <p>Yazışmalar talebin çözümü ve takibi için gerekli olduğu sürece saklanır; ihtiyaç sona erdiğinde, zorunlu yasal saklama yükümlülükleri saklı kalmak üzere silinir. Silme talebinizi iletişim adresine iletebilirsiniz. Ekran görüntülerindeki bebek adı, fotoğraf ve sağlık bilgilerini gerekmiyorsa gizleyin.</p>
+    </section>
+
+    <section>
+      <h2>12. Gizlilik Hakları ve Tercihler</h2>
+      <p>Uygulamadaki bilgileri görüntüleyebilir, desteklenen kayıtları düzenleyebilir, kayıt veya profilleri silebilir ve CSV kapsamındaki verileri dışa aktarabilirsiniz. Fotoğraf ve bildirim izinlerini, iCloud kullanımını ve kilit ekranı görünürlüğünü iOS ayarlarından değiştirebilirsiniz.</p>
+      <p>KVKK kapsamındaki haklarınıza ilişkin bilgi edinme, erişim, düzeltme, silme ve diğer taleplerinizi <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a> adresine iletebilirsiniz. Geliştirici cihazınızdaki veya özel iCloud veritabanınızdaki kayıtları uzaktan okuyamaz veya silemez; ancak işlem adımlarında yardımcı olabilir. Bize gönderdiğiniz destek yazışmalarına ilişkin talepler de bu adrese iletilebilir.</p>
+      <p>Başvurular ilgili mevzuat kapsamında en geç 30 gün içinde yanıtlanır. KVKK&#x27;nın öngördüğü koşullar altında Kişisel Verileri Koruma Kurulu&#x27;na şikâyet hakkınız saklıdır. Haklarınız hakkında: <a href="https://www.kvkk.gov.tr/Icerik/2036/Ilgili-Kisinin-Haklari">https://www.kvkk.gov.tr/Icerik/2036/Ilgili-Kisinin-Haklari</a></p>
+    </section>
+
+    <section>
+      <h2>13. Destek Sitesi, Dış Bağlantılar ve Güncellemeler</h2>
+      <p>Destek sitesi GitHub Pages üzerinde barındırılır. Sayfalara reklam, analitik kodu veya çerez eklemiyoruz. GitHub, siteyi sunarken IP adresi ve teknik istek bilgilerini kendi politikası kapsamında işleyebilir: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a></p>
+      <p>Uygulamadaki kaynak veya yardım bağlantılarını açtığınızda ilgili web sitesinin gizlilik koşulları geçerlidir. Politika değiştiğinde web sayfası ve uygulama içi metin, son güncelleme tarihiyle birlikte güncellenir. Web sürümü: <a href="https://bayrambas255.github.io/kucak-support/privacy.html">https://bayrambas255.github.io/kucak-support/privacy.html</a></p>
     </section>
 
     <footer>
@@ -242,7 +249,7 @@
       </div>
       <div>© <span id="year">2026</span> Kucak. Tüm hakları saklıdır.</div>
     </footer>
-  </div>
+  </main>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

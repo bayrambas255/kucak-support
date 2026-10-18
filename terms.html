@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kucak Kullanım Şartları — Apple App Store abonelik kuralları ve Türk Tüketici Kanunu uyumlu." />
-  <meta name="theme-color" content="#FF8A7A" />
+  <meta name="description" content="Kucak ek hizmet koşulları — özellikler, Premium abonelikleri, veri yönetimi ve Apple Standart EULA bağlantısı." />
+  <meta name="theme-color" content="#FAF7F4" />
   <title>Kucak · Kullanım Şartları</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%B1%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="assets/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
   <style>
     :root {
-      --brand: #FF8A7A;
+      --brand: #C4483E;
       --brand-soft: #FFD4CB;
-      --brand-dark: #D9604F;
+      --brand-dark: #B94439;
       --warning: #F5A623;
-      --bg: #FFF8F5;
-      --surface: #FFFFFF;
-      --text: #2A2320;
-      --text-secondary: #6B5F58;
-      --text-tertiary: #A09590;
-      --divider: #F0E4DD;
+      --bg: #FAF7F4;
+      --surface: #FFFDFC;
+      --text: #211C1A;
+      --text-secondary: #6D645F;
+      --text-tertiary: #756B65;
+      --divider: #E5DED9;
       --radius: 16px;
       --radius-lg: 24px;
       --shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 8px 24px rgba(217, 96, 79, 0.06);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1A1614;
-        --surface: #251F1C;
-        --text: #F5EFEC;
-        --text-secondary: #B8ACA5;
-        --text-tertiary: #7A6F69;
-        --divider: #322924;
+        --brand: #FF9A8D;
+        --brand-dark: #FF9A8D;
+        --bg: #0F0D0C;
+        --surface: #171412;
+        --text: #F7F2EE;
+        --text-secondary: #C7BDB7;
+        --text-tertiary: #978D87;
+        --divider: #3B3531;
         --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
       }
     }
@@ -42,10 +45,16 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+      overflow-wrap: anywhere;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--brand-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
     .container {
       max-width: 720px;
       margin: 0 auto;
@@ -146,148 +155,126 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <div class="breadcrumb"><a href="index.html">← Destek</a></div>
     <h1>Kullanım Şartları</h1>
-    <p class="last-updated">Son güncelleme: 22 Nisan 2026</p>
+    <p class="last-updated">Son güncelleme: 18 Ekim 2026</p>
 
     <div class="summary">
       <div class="summary-icon" aria-hidden="true">📄</div>
       <div>
         <strong>Kısa Özet</strong>
-        <span>Kucak kişisel bir günlüktür, tıbbi tavsiye değildir. Sağlık kararları için daima çocuk doktorunuza başvurun. Premium abonelikler Apple tarafından yönetilir ve istediğiniz zaman iptal edilebilir.</span>
+        <span>Kucak kişisel bir bakım günlüğüdür; tıbbi karar aracı değildir. Premium satın alımları Apple tarafından yönetilir. Uygulamayı veya kayıtlarını silmek aboneliği iptal etmez. Apple&#x27;ın Standart Son Kullanıcı Lisans Sözleşmesi geçerlidir.</span>
       </div>
     </div>
 
     <section>
       <h2>1. Taraflar ve Kapsam</h2>
-      <p>Bu Kullanım Şartları ("Şartlar"), Kucak uygulamasını ("Uygulama") kullanan siz ("Kullanıcı") ile uygulamayı geliştiren Bayram Baş ("Geliştirici") arasında, uygulamayı indirdiğiniz ve kullanmaya devam ettiğiniz an itibarıyla yürürlüğe girer.</p>
-      <p>Uygulamayı kullanarak bu şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş olursunuz. Kabul etmiyorsanız uygulamayı kullanmamanız gerekir.</p>
+      <p>Bu ek hizmet koşulları (&quot;Koşullar&quot;), Kucak uygulamasını (&quot;Uygulama&quot;) kullanan siz (&quot;Kullanıcı&quot;) ile uygulamayı geliştiren Bayram Baş (&quot;Geliştirici&quot;) arasındaki hizmet kullanımını açıklar.</p>
+      <p>Uygulamanın lisansı Apple&#x27;ın Standart Son Kullanıcı Lisans Sözleşmesi&#x27;ne (Standart EULA) tabidir. Bu metin; Kucak&#x27;ın özellikleri, Premium abonelikleri ve veri yönetimi hakkında ek koşulları belirtir. Lisans ve kullanım kuralları bakımından Standart EULA esas alınır; emredici mevzuattan doğan tüketici haklarınız saklıdır.</p>
+      <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standart EULA</a></p>
     </section>
 
     <section>
       <h2>2. Hizmetin Tanımı</h2>
-      <p>Kucak, ebeveynlere ve bakım verenlere bebeklerinin beslenme, uyku, bez değişimi, büyüme, aşı, ilaç, gelişim kilometre taşları ve hatıralarını kaydetme olanağı sunan bir kişisel günlük uygulamasıdır.</p>
-      <p>Uygulama içindeki aşı takvimi T.C. Sağlık Bakanlığı'nın yayımladığı kamuya açık takvime, büyüme eğrileri ise Dünya Sağlık Örgütü (WHO) standartlarına dayanır. Bu bilgiler yalnızca referans amaçlıdır.</p>
+      <p>Kucak; ebeveynlere ve bakım verenlere beslenme, uyku, bez değişimi, büyüme, aşı, ilaç, ek gıda denemeleri, gelişim kilometre taşları ve fotoğraflı hatıraları kaydetme olanağı sunan bir kişisel bakım günlüğüdür.</p>
+      <p>Uygulama, kaydedilen bilgilerden cihaz üzerinde günlük ve haftalık özetler hazırlar. Bebeğin yaşına göre ilk yıl haftalık, ardından 24. aya kadar aylık gelişim, uyku ve beslenme içerikleri gösterir. Prematüre bebeklerde bu gelişim içeriği, girilen gebelik haftasına göre düzeltilmiş yaşla seçilir. İçerikler uygulamayla birlikte sunulur; tıbbi değerlendirme yerine geçmez.</p>
+      <p>Kullanıcı, sunulan paylaşım kartlarını cihazında PNG görseli olarak hazırlayabilir ve iOS paylaşım seçenekleriyle dışa aktarabilir. Kartta gösterilecek ad, tarih ve uygun kartlarda fotoğraf gibi bilgileri paylaşmadan önce önizlemeden kontrol etmelidir. CSV dışa aktarma ve Premium doktor görüşmesi için PDF özet de mevcuttur.</p>
+      <p>Aşı referansları T.C. Sağlık Bakanlığı&#x27;nın yayımladığı kamuya açık takvime, büyüme eğrileri Dünya Sağlık Örgütü (WHO) standartlarına dayanır. Uygulamadaki kaynak bağlantıları ilgili içeriklerde gösterilir.</p>
     </section>
 
     <section>
-      <h2>3. Tıbbi Sorumluluk Reddi</h2>
-      <div class="callout">ÖNEMLİ: Kucak tıbbi bir cihaz değildir. Uygulama içindeki hiçbir bilgi, hesaplama, grafik, tahmin veya hatırlatıcı; doktor, hemşire veya diğer sağlık profesyonellerinin teşhis, tedavi ve tavsiyesinin yerine geçmez.</div>
-      <p>Aşı dozları ve ilaç uygulamaları yalnızca hatırlatma amaçlıdır; uygulama öncesinde mutlaka çocuğunuzun doktoruyla teyit etmelisiniz. Uyku penceresi tahmini, büyüme persentilleri ve gelişim önerileri yol gösterici niteliktedir — çocuğunuzun bireysel gelişimi farklılık gösterebilir.</p>
-      <p>Acil sağlık durumlarında derhal <strong>112</strong>'yi arayın veya en yakın sağlık kuruluşuna başvurun. Uygulama hiçbir acil durum hizmeti sunmaz.</p>
-      <p>Uygulama içindeki bilgilere dayanarak alınan kararlardan doğabilecek zararlardan Geliştirici sorumlu tutulamaz.</p>
+      <h2>3. Sağlık Bilgileri ve Hatırlatıcılar</h2>
+      <p class="callout">ÖNEMLİ: Kucak tıbbi bir cihaz değildir. Uygulama içindeki bilgi, hesaplama, grafik, tahmin, gelişim içeriği veya hatırlatıcı; sağlık profesyonellerinin teşhis, tedavi ve tavsiyesinin yerine geçmez.</p>
+      <p>İlaç adı, doz ve zamanlarını doktorunuzun veya eczacınızın verdiği plana göre girmelisiniz. Kucak ilaç ya da doz önermez. Aşı takvimi, ek gıda bilgileri, uyku penceresi tahmini, büyüme persentilleri ve gelişim içerikleri kişisel takip ve genel bilgilendirme içindir; bebeğinizin bireysel gereksinimlerini çocuk doktorunuzla değerlendirin.</p>
+      <p>Bildirimler cihaz izinlerine, iOS ayarlarına ve uygulamanın çalışma koşullarına bağlıdır; zamanında ulaşmaları garanti edilemez. Sağlıkla ilgili uygulamalar için yalnızca bu hatırlatıcılara güvenmeyin. Uygulamadaki sessiz saatler, aşı ve ilaç dozu hatırlatmalarını susturmaz.</p>
+      <p>Acil sağlık durumlarında 112&#x27;yi arayın veya en yakın sağlık kuruluşuna başvurun. Kucak acil durum hizmeti sunmaz.</p>
     </section>
 
     <section>
       <h2>4. Kullanım Lisansı</h2>
-      <p>Uygulamayı yalnızca kişisel, ticari olmayan amaçlarla kullanabilirsiniz. Size verilen lisans:</p>
-      <ul>
-        <li>Kişiseldir, devredilemez</li>
-        <li>Apple App Store üzerinden edinilen hesabınıza bağlıdır</li>
-        <li>Aynı Apple ID ile sahip olduğunuz cihazlarda Family Sharing kuralları çerçevesinde kullanılabilir</li>
-      </ul>
-      <p>Yapılmaması gerekenler:</p>
-      <ul>
-        <li>Uygulamayı tersine mühendislik yapmak, parçalara ayırmak</li>
-        <li>Kaynak kodunu çıkarmaya çalışmak</li>
-        <li>İçeriği izinsiz kopyalamak veya yeniden dağıtmak</li>
-        <li>Uygulamayı yasadışı amaçlarla kullanmak</li>
-      </ul>
+      <p>Uygulamayı Apple&#x27;ın Standart EULA&#x27;sı ve App Store kullanım kuralları kapsamında kullanabilirsiniz. Lisansın kapsamı, cihazlarda kullanım, devir ve diğer sınırlamalar bu belgelere tabidir.</p>
+      <p>Premium erişimi, Apple tarafından doğrulanan güncel satın alma hakkına bağlıdır. Birden fazla bebek profili oluşturma özelliği, başka bir Apple hesabıyla bakım kaydı paylaşımı veya abonelik için Aile Paylaşımı hakkı anlamına gelmez.</p>
     </section>
 
     <section>
       <h2>5. Premium Abonelik</h2>
-      <p>Kucak Premium, Uygulama'nın bazı gelişmiş özelliklerine (uyku penceresi tahmini, WHO persentil bantları, pediatri PDF raporu, birden fazla bebek, sınırsız geçmiş ve hatıra yıldönümü bildirimleri) erişim sağlar.</p>
-
-      <p><strong>Fiyatlandırma ve dönem:</strong></p>
+      <p>Premium isteğe bağlıdır ve Apple Uygulama İçi Satın Alma sistemi üzerinden sunulur. Premium özellikleri:</p>
       <ul>
-        <li>Aylık ve yıllık plan seçenekleri mevcuttur. Güncel fiyatlar satın alma ekranında gösterilir.</li>
-        <li>7 günlük ücretsiz deneme süresi (kullanıma uygun hesaplarda) tanınabilir.</li>
+        <li>Gelişmiş haftalık karşılaştırmalar</li>
+        <li>Doktor görüşmesi için PDF özet</li>
+        <li>Birden fazla bebek profili</li>
+        <li>Uyku penceresi hatırlatıcısı</li>
+        <li>Hatıra yıldönümü bildirimleri</li>
+        <li>Ek paylaşım şablonları (Pastel ve Gece)</li>
       </ul>
-
-      <p><strong>Otomatik yenileme:</strong></p>
+      <p>Uyku penceresi tahmini, WHO persentil bantları, geçmiş kayıtlara erişim, temel günlük ve haftalık özetler ile Sade paylaşım şablonu Premium gerektirmez.</p>
+      <p><strong>Fiyatlandırma ve deneme:</strong></p>
       <ul>
-        <li>Abonelikler mevcut dönem bitmeden önce 24 saat içinde otomatik olarak yenilenir.</li>
-        <li>Yenileme tutarı, planın güncel fiyatı üzerinden Apple App Store hesabınızdan tahsil edilir.</li>
-        <li>Ücretsiz deneme süresinin sona ermesinden 24 saat önce iptal etmezseniz abonelik otomatik başlar.</li>
+        <li>Aylık ve yıllık plan seçenekleri sunulur. Güncel fiyat, dönem ve koşullar satın alma ekranında gösterilir. Ödeme Apple hesabınız üzerinden alınır.</li>
+        <li>Yıllık planda ücretsiz deneme, yalnızca Apple&#x27;ın o ürün için güncel bir deneme teklifi sunması ve hesabınızı uygun bulması hâlinde gösterilir. Denemenin süresi ve ardından uygulanacak ücret satın alma ekranında belirtilir; her hesap için deneme garantisi yoktur.</li>
       </ul>
-
-      <p><strong>İptal:</strong></p>
+      <p><strong>Yenileme ve iptal:</strong></p>
       <ul>
-        <li>İptali her zaman yapabilirsiniz: <em>iPhone Ayarları → Apple ID → Abonelikler → Kucak → İptal</em>.</li>
-        <li>İptal mevcut dönem sonunda geçerli olur; kalan süre boyunca premium özelliklerinden yararlanmaya devam edersiniz.</li>
+        <li>Abonelik, Apple koşullarına göre iptal edilmedikçe seçilen dönem için otomatik yenilenir. Ücretlendirme ve yenileme Apple tarafından yönetilir.</li>
+        <li>iPhone Ayarları → [adınız] → Abonelikler → Kucak yolundan aboneliğinizi yönetebilirsiniz.</li>
+        <li>Deneme sonrasında ücretlendirme istemiyorsanız deneme bitiminden en az 24 saat önce iptal edin. İptal sonrası erişim süresi, deneme dâhil, Apple&#x27;ın gösterdiği koşullara ve sona erme tarihine bağlıdır.</li>
+        <li>Uygulamayı kaldırmak veya Kucak verilerini silmek aboneliği iptal etmez.</li>
+        <li>Geri yüklemek için satın alımın yapıldığı Apple hesabını kullanarak Kucak içinde Ayarlar → Satın alımları geri yükle seçeneğine dokunun.</li>
       </ul>
-
       <p><strong>İade:</strong></p>
-      <ul>
-        <li>Satın alma ve iade süreçleri Apple tarafından yönetilir. İade talepleri için <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> adresine başvurmanız gerekir.</li>
-        <li>Geliştirici, Apple'ın iade politikası dışında ayrıca iade sunma yükümlülüğünde değildir.</li>
-      </ul>
+      <p>Satın alma ve iade talepleri Apple tarafından yönetilir. İade başvurusu reportaproblem.apple.com üzerinden yapılabilir; uygunluk Apple&#x27;ın koşullarına ve geçerli mevzuata göre değerlendirilir. Emredici mevzuattan doğan haklarınız saklıdır.</p>
+      <p><a href="https://support.apple.com/tr-tr/118428" target="_blank" rel="noopener">Apple: Aboneliği iptal etme</a></p>
+      <p><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">Apple: İade talebi</a></p>
     </section>
 
     <section>
       <h2>6. Kullanıcı Sorumlulukları</h2>
       <ul>
-        <li>Uygulamaya girdiğiniz bilgilerin doğruluğundan siz sorumlusunuz.</li>
-        <li>Apple ID ve cihaz güvenliğinizi sağlamak sizin sorumluluğunuzdadır.</li>
-        <li>Uygulamayı yalnızca 18 yaş ve üzerindeyseniz veya veli/vasi gözetimindeyseniz kullanabilirsiniz.</li>
-        <li>Çocuğunuz için girdiğiniz sağlık bilgilerinin işlenmesine veli sıfatıyla rıza göstermiş olursunuz.</li>
+        <li>Girdiğiniz kayıtların doğruluğunu ve sağlık profesyonellerinin verdiği bilgilerle uyumunu kontrol edin.</li>
+        <li>Cihazınızın ve Apple hesabınızın güvenliğini koruyun.</li>
+        <li>Çocuğa veya başka bir kişiye ait kayıtları yalnızca bunları tutmaya ve paylaşmaya yetkiliyseniz girin.</li>
+        <li>Dışa aktardığınız dosyalarda ve paylaşım kartlarında yer alacak kişisel bilgileri ve paylaşım hedefini kontrol edin.</li>
       </ul>
+      <p>Kucak ebeveynlerin ve bakım verenlerin kullanımına yöneliktir. Verilerin saklanması, izinler ve kullanıcı tercihlerinin ayrıntıları Gizlilik Politikası&#x27;nda açıklanır.</p>
     </section>
 
     <section>
-      <h2>7. Fikri Mülkiyet</h2>
-      <p>Uygulamanın tüm tasarımı, kodu, içeriği, markası ve logosu Geliştirici'ye aittir ve ilgili fikri mülkiyet mevzuatıyla korunur.</p>
-      <p>Uygulamaya yüklediğiniz fotoğraflar, notlar ve diğer içerikler size aittir — Geliştirici bu içerikler üzerinde hiçbir mülkiyet veya kullanım hakkı iddia etmez. İçerikleriniz cihazınızda ve kendi iCloud hesabınızda saklanır (detay için <a href="privacy.html">Gizlilik Politikası</a>).</p>
+      <h2>7. İçerikler ve Fikri Mülkiyet</h2>
+      <p>Uygulamanın tasarımı, kodu, markası ve özgün içerikleri üzerindeki haklar Geliştirici&#x27;ye veya ilgili hak sahiplerine aittir. Üçüncü taraf kaynak ve bileşenlerin hakları sahiplerinde kalır.</p>
+      <p>Girdiğiniz fotoğraflar, notlar ve diğer kişisel içerikler üzerindeki haklar size aittir. Geliştirici bu içerikler üzerinde mülkiyet veya tanıtım amaçlı kullanım hakkı talep etmez. Kayıtlar cihazınızda; iCloud eşitlemesi açıksa kendi Apple hesabınızda saklanır. Paylaştığınız veya dışa aktardığınız kopyalar seçtiğiniz hedefin koşullarına tabi olabilir.</p>
     </section>
 
     <section>
-      <h2>8. Garantisizlik Beyanı</h2>
-      <p>Uygulama "olduğu gibi" ve "uygun olduğu şekilde" sunulur. Geliştirici aşağıdakiler için açık veya zımni hiçbir garanti vermez:</p>
-      <ul>
-        <li>Uygulamanın kesintisiz veya hatasız çalışacağı</li>
-        <li>Uygulama içindeki tüm bilgilerin (aşı takvimi, WHO değerleri vb.) her zaman güncel olacağı</li>
-        <li>Tahminlerin (uyku penceresi gibi) her bebek için doğru sonuç vereceği</li>
-        <li>Apple servislerinin (iCloud, App Store) sürekli erişilebilir olacağı</li>
-      </ul>
-      <p>Uygulama içindeki referans verilerin (aşı takvimi, beslenme kataloğu) güncelliğini doğrulamak kullanıcının sorumluluğundadır — lütfen çocuk doktorunuza başvurun.</p>
+      <h2>8. Hizmetin Kullanılabilirliği</h2>
+      <p>Uygulamanın kesintisiz veya hatasız çalışması, her tahminin bebeğinizin bireysel durumuna uyması ya da Apple servislerinin sürekli kullanılabilir olması garanti edilemez. Referans bilgiler güncelliğini yitirebilir; sağlıkla ilgili kararlarınız için çocuk doktorunuza başvurun.</p>
+      <p>Cihaz arızası, erişim sorunları ve eşitleme gecikmeleri kayıtlarınıza erişimi etkileyebilir. Önemli kayıtları gerektiğinde dışa aktarın. iCloud hesap durumu, tüm kayıtların eşitlenmesinin tamamlandığına dair bir doğrulama değildir.</p>
     </section>
 
     <section>
-      <h2>9. Sorumluluk Sınırlaması</h2>
-      <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde, Geliştirici'nin uygulamanın kullanımından doğan doğrudan, dolaylı, arızi, özel, cezai zararlardan sorumluluğu bulunmamaktadır.</p>
-      <p>Özellikle:</p>
-      <ul>
-        <li>Veri kaybı (cihaz arızası, iCloud erişim sorunu)</li>
-        <li>Bildirimlerin zamanında iletilememesi</li>
-        <li>Uygulama içindeki referans bilgilere dayanarak alınan sağlık kararlarının sonuçları</li>
-      </ul>
-      <p>Türk Tüketici Kanunu kapsamındaki devredilemez haklarınız saklıdır.</p>
+      <h2>9. Haklar ve Sorumluluk</h2>
+      <p>Tarafların hak ve sorumlulukları, Apple Standart EULA&#x27;sı ve uygulanabilir mevzuat çerçevesinde değerlendirilir. Bu Koşullar; tüketici haklarını veya kanunen sınırlandırılamayan ya da ortadan kaldırılamayan sorumlulukları sınırlamaz.</p>
     </section>
 
     <section>
-      <h2>10. Hesap Askıya Alma</h2>
-      <p>Aşağıdaki durumlarda uygulamaya erişiminiz Apple tarafından kısıtlanabilir:</p>
-      <ul>
-        <li>Apple App Store hesabınızın askıya alınması</li>
-        <li>Ödeme sorunları nedeniyle abonelik yenilenememesi</li>
-        <li>Uygulamanın kötüye kullanıldığının tespit edilmesi</li>
-      </ul>
-      <p>Geliştirici kendi sunucusu olmadığı için hesap kavramı yerel cihaza bağlıdır — uygulamanın silinmesi tüm lisansı sona erdirir.</p>
+      <h2>10. Hesap, Veri Silme ve Satın Alma Hakkı</h2>
+      <p>Kucak için ayrı bir kullanıcı hesabı veya geliştirici sunucusunda oturum açma sistemi yoktur. Apple hesabı, iCloud ve App Store hizmetleri Apple tarafından yönetilir.</p>
+      <p>Kayıtlarınızı Ayarlar → Gizlilik ve veri ekranından silebilirsiniz. iCloud kullanılabilirken silme, eşitleme üzerinden iCloud&#x27;daki kopyalara ve diğer cihazlarınıza yansıtılır. iCloud kullanılamıyorsa işlem bu cihazdaki kayıtları siler; daha önce eşitlenmiş uzak kopyalar o anda silinmeyebilir. Ayrıntılar ve silme kapsamı işlem öncesinde gösterilir.</p>
+      <p>Uygulamayı cihazdan kaldırmak, iCloud&#x27;daki veya daha önce dışa aktarılan ve paylaşılan kopyaları kendiliğinden silmez. Veri silme ve uygulamayı kaldırma işlemleri, Apple tarafından yönetilen satın alma hakkınızı veya aboneliğinizi kendiliğinden sona erdirmez.</p>
     </section>
 
     <section>
       <h2>11. Değişiklikler</h2>
-      <p>Bu Şartlar güncellendiğinde uygulama içi bildirim yapılır ve bu sayfadaki "Son güncelleme" tarihi değişir. Güncellemeden sonra uygulamayı kullanmaya devam etmeniz yeni şartları kabul etmiş olduğunuz anlamına gelir.</p>
-      <p>Önemli değişiklikler (ör. fiyatlandırma, ücretlendirme dönemleri) aboneliğinizin bir sonraki yenileme tarihinde geçerli olur.</p>
+      <p>Bu metin güncellendiğinde sayfadaki Son güncelleme tarihi değiştirilir. Güncel web metnine Kucak destek sayfasından, uygulamayla gelen kopyasına Ayarlar → Kullanım koşulları bölümünden erişebilirsiniz.</p>
+      <p>Abonelik fiyatı, dönem veya teklif değişikliklerinde Apple&#x27;ın satın alma ekranında ve abonelik yönetiminde sunduğu koşullar ile geçerli mevzuat uygulanır.</p>
     </section>
 
     <section>
       <h2>12. İletişim</h2>
-      <p>Bu Şartlar hakkında soru, şikâyet veya talepleriniz için:</p>
-      <p>E-posta: <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a></p>
-      <p>Ayrıca Apple App Store Connect üzerinden de abonelik ile ilgili destek alabilirsiniz.</p>
+      <p>Kucak&#x27;ın kullanımı, bu Koşullar veya kayıtlarınızla ilgili sorularınız için bayrambas255@icloud.com adresine yazabilirsiniz.</p>
+      <p>Apple hesabı, faturalandırma, abonelik iptali veya iade işlemleri için Apple Destek kanallarını kullanabilirsiniz.</p>
+      <p><a href="mailto:bayrambas255@icloud.com">Kucak destek e-postası</a></p>
+      <p><a href="https://support.apple.com/tr-tr/" target="_blank" rel="noopener">Apple Destek</a></p>
     </section>
 
     <footer>
@@ -297,7 +284,7 @@
       </div>
       <div>© <span id="year">2026</span> Kucak. Tüm hakları saklıdır.</div>
     </footer>
-  </div>
+  </main>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

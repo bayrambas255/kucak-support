@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kucak — Türkiye'nin bebek takip uygulaması. Destek ve iletişim." />
-  <meta name="theme-color" content="#FF8A7A" />
+  <meta name="description" content="Kucak destek: bebek takibi, iCloud, veri silme, CSV ve PDF dışa aktarma, paylaşım ve Premium abonelik yardımı." />
+  <meta name="theme-color" content="#FAF7F4" />
   <title>Kucak · Destek</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%B1%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="assets/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
   <style>
     :root {
-      --brand: #FF8A7A;
+      --brand: #C4483E;
       --brand-soft: #FFD4CB;
-      --brand-dark: #D9604F;
-      --bg: #FFF8F5;
-      --surface: #FFFFFF;
-      --text: #2A2320;
-      --text-secondary: #6B5F58;
-      --text-tertiary: #A09590;
-      --divider: #F0E4DD;
+      --brand-dark: #B94439;
+      --bg: #FAF7F4;
+      --surface: #FFFDFC;
+      --text: #211C1A;
+      --text-secondary: #6D645F;
+      --text-tertiary: #756B65;
+      --divider: #E5DED9;
       --radius: 18px;
       --shadow: 0 1px 2px rgba(42, 35, 32, 0.04), 0 8px 24px rgba(217, 96, 79, 0.06);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1A1614;
-        --surface: #251F1C;
-        --text: #F5EFEC;
-        --text-secondary: #B8ACA5;
-        --text-tertiary: #7A6F69;
-        --divider: #322924;
+        --brand: #FF9A8D;
+        --brand-dark: #FF9A8D;
+        --bg: #0F0D0C;
+        --surface: #171412;
+        --text: #F7F2EE;
+        --text-secondary: #C7BDB7;
+        --text-tertiary: #978D87;
+        --divider: #3B3531;
         --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
       }
     }
@@ -39,10 +42,16 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      overflow-wrap: anywhere;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--brand-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
     .container {
       max-width: 680px;
       margin: 0 auto;
@@ -56,12 +65,9 @@
       width: 72px;
       height: 72px;
       margin: 0 auto 18px;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+      object-fit: cover;
       border-radius: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
+      display: block;
       box-shadow: 0 8px 24px rgba(217, 96, 79, 0.3);
     }
     h1 {
@@ -70,6 +76,7 @@
       margin: 0 0 6px;
       letter-spacing: -0.4px;
     }
+    .last-updated { color: var(--text-tertiary); font-size: 13px; margin: 12px 0 0; }
     .tagline {
       color: var(--text-secondary);
       font-size: 16px;
@@ -95,17 +102,18 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--brand);
+      background: #C4483E;
       color: white;
       padding: 12px 20px;
       border-radius: 999px;
       font-weight: 600;
       font-size: 15px;
       margin-top: 4px;
+      margin-bottom: 12px;
       transition: background 0.2s;
     }
     .contact-cta:hover {
-      background: var(--brand-dark);
+      background: #A93B34;
       text-decoration: none;
       color: white;
     }
@@ -181,11 +189,12 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <header>
-      <div class="logo" aria-hidden="true">🤱</div>
+      <img class="logo" src="assets/app-icon.png" width="72" height="72" alt="" />
       <h1>Kucak</h1>
       <p class="tagline">Bebeğinizin günlük takibi için sıcak bir alan.</p>
+      <p class="last-updated">Son güncelleme: 18 Ekim 2026</p>
     </header>
 
     <section class="card">
@@ -193,40 +202,86 @@
       <a class="contact-cta" href="mailto:bayrambas255@icloud.com?subject=Kucak%20Destek">
         ✉️ Bize E-posta Gönderin
       </a>
-      <span class="response-time">Yanıt süresi: hafta içi 1–2 iş günü.</span>
+      <p>Destek talebinize uygulama sürümü, iOS sürümü ve cihaz modelini ekleyin. Ekran görüntülerinde gereksiz bebek adı, fotoğraf ve sağlık bilgilerini gizleyin. Parola veya ödeme kartı bilgisi göndermeyin.</p>
+      <span class="response-time">Hafta içi 1–2 iş günü içinde yanıtlamayı hedefliyoruz.</span>
     </section>
 
     <section class="card">
       <h2>Bilmek İstedikleriniz</h2>
 
       <div class="faq-item">
-        <h3>Verilerim nerede saklanıyor?</h3>
-        <p>Tüm bebek bakım kayıtlarınız yalnızca cihazınızda yerel olarak ve (açıksa) kendi iCloud hesabınızda saklanır. Bizim sunucumuz yoktur — verileriniz bize gönderilmez.</p>
+        <h3>Kucak ile neleri takip edebilirim?</h3>
+        <p>Beslenme, emzirme ve sağım, uyku, bez, büyüme, aşı, ilaç dozları, ek gıda denemeleri, gelişim adımları ve hatıraları kaydedebilirsiniz. Yaşa göre haftalık/aylık bilgiler, haftalık özetler, widget ve emzirme Canlı Etkinliği de bulunur.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Hesabımı ve verilerimi nasıl silerim?</h3>
-        <p>Uygulama içinden <strong>Ayarlar → Verileri Sil</strong> ile tüm bebek profillerini ve kayıtları kalıcı olarak silebilirsiniz. Uygulamayı cihazdan kaldırmak da yerel verileri siler.</p>
+        <h3>Verilerim nerede saklanıyor? Hesap açmam gerekir mi?</h3>
+        <p>Ayrı bir Kucak hesabı açmanız gerekmez. Bakım kayıtları cihazınızda tutulur; iCloud kullanılabilir ve eşitleme açıksa kendi Apple hesabınızın özel iCloud alanında cihazlarınız arasında eşitlenir. Geliştiricinin bakım kayıtlarını tuttuğu bir sunucu yoktur. Sizin başlattığınız paylaşım ve destek e-postaları için <a href="privacy.html">Gizlilik Politikası</a> geçerlidir.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Aboneliğimi nasıl iptal ederim?</h3>
-        <p>Abonelik Apple ID üzerinden yönetilir. <em>Ayarlar → [adınız] → Abonelikler → Kucak</em> yolundan dilediğiniz an iptal edebilirsiniz. Mevcut dönem sonuna kadar premium aktif kalır.</p>
+        <h3>iCloud eşitlemesi çalışmıyorsa ne yapmalıyım?</h3>
+        <p>iPhone Ayarları’nda doğru Apple Hesabı ile giriş yaptığınızı, iCloud’da Kucak’ın açık olduğunu, yeterli iCloud alanı ve internet bağlantısı bulunduğunu kontrol edin. Uygulamada <strong>Ayarlar → Gizlilik ve veri</strong> ekranındaki iCloud durumuna bakın. Eşitleme zaman alabilir; yalnızca iCloud’un açık görünmesi bütün kayıtların eşitlendiği anlamına gelmez. Kayıt kaybı riskini önlemek için sorunu çözmeden uygulamayı kaldırmayın veya verileri silmeyin.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Satın aldığım abonelik geri yüklenmiyor</h3>
-        <p>Aynı Apple Kimliği ile giriş yaptığınızdan emin olun, ardından <strong>Ayarlar → Aboneliği Geri Yükle</strong> seçeneğine dokunun. Sorun devam ederse bize ulaşın.</p>
+        <h3>Tüm kayıtlarımı nasıl silerim?</h3>
+        <p><strong>Ayarlar → Gizlilik ve veri → Tüm verileri sil</strong> yolundan iki aşamalı onayla tüm bebek profillerini ve kayıtları silebilirsiniz. iCloud kullanılamıyorsa seçenek <strong>Bu cihazdaki verileri sil</strong> olarak görünür. Bu durumda daha önce iCloud’a eşitlenen kopyalar silinmeyebilir; onları da silmek için önce iCloud erişimini yeniden sağlayın. Eşitleme açıkken silme işlemi diğer cihazlarınıza da yansır. Veri silmek aboneliği iptal etmez.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Aşı takvimi neden ABD'dekinden farklı?</h3>
-        <p>Kucak, T.C. Sağlık Bakanlığı Genişletilmiş Bağışıklama Programı takvimini esas alır. Uygulamadaki tarihler hekim önerisinin yerini tutmaz; doktorunuzun önerisi her zaman önceliklidir.</p>
+        <h3>Tek bir bebeğin profilini silebilir miyim?</h3>
+        <p><strong>Ayarlar → Bebekler</strong> bölümünde ilgili bebeği seçin; ardından <strong>Profili düzenle → Bebek profilini sil</strong> yolunu izleyin. O bebeğe bağlı kayıtlar da silinir. iCloud’a yansıması, tüm verileri silme işlemindeki gibi erişim ve eşitleme durumuna bağlıdır.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Bir hata buldum veya özellik önerim var</h3>
-        <p>Sevinerek dinleriz. Cihaz modeli, iOS sürümü ve mümkünse ekran görüntüsüyle birlikte <a href="mailto:bayrambas255@icloud.com?subject=Kucak%20Geri%20Bildirim">bize yazın</a>.</p>
+        <h3>CSV dışa aktarma tam bir yedek midir?</h3>
+        <p><strong>Ayarlar → CSV dışa aktar</strong>, seçili bebeğin beslenme, bez, uyku, büyüme, aşı, ilaç dozu, tamamlanmış gelişim adımı ve ek gıda kayıtlarını dosyaya aktarır. Fotoğraflar, hatıra albümü ve tüm profil bilgileri için eksiksiz yedek değildir; CSV’den geri yükleme özelliği yoktur. Dosyayı paylaşmadan önce içeriğini kontrol edin.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Doktor görüşmesi için PDF özeti nasıl alırım?</h3>
+        <p><strong>Ayarlar → Doktor görüşmesi için PDF özet</strong> seçeneğiyle kayıtlarınızdan cihazda bir özet oluşturabilirsiniz. PDF önizlemesindeki menüden paylaşabilir veya AirPrint ile yazdırabilirsiniz. Bu özellik Premium gerektirir; PDF bir tıbbi rapor veya tanı değildir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Paylaşım kartında hangi bilgiler görünür?</h3>
+        <p>Ay dönümü, Haftamız ve büyüme kartlarında kart türüne göre sunulan ad, fotoğraf, tarih ve imza seçeneklerini yönetebilirsiniz. Kartta görünen ölçüm ve özet değerlerini paylaşmadan önce önizlemeden kontrol edin. Kart cihazda PNG olarak hazırlanır; yalnızca seçtiğiniz uygulamaya paylaşılır veya Fotoğraflar’a kaydedilir. <strong>Sade</strong> şablonu abonelik gerektirmez; ek şablonların dışa aktarımı Premium gerektirir. Fotoğraflar izni yalnızca oluşturulan kartı eklemek içindir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Bildirimler neden gelmiyor?</h3>
+        <p>Kucak’ta <strong>Ayarlar → Bildirim tercihleri</strong> bölümünü, ayrıca iPhone Ayarları’nda Kucak bildirim iznini, Odak ve sessiz saat ayarlarını kontrol edin. Hatırlatıcılar cihazda planlanır; iOS ayarları görünürlüğü ve teslim zamanını etkileyebilir. İlaç ve aşı için tek güvence olarak bildirime dayanmayın.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Kilit ekranında bebek bilgilerim görünebilir mi?</h3>
+        <p>Bildirim önizlemeleri ve widget bebek adı ile bakım bilgilerini gösterebilir. Emzirme Canlı Etkinliği taraf ve süre bilgilerini Kilit Ekranı/Dynamic Island’da gösterebilir. Bildirim önizlemelerini ve Canlı Etkinlik izinlerini iOS ayarlarından yönetin; istemediğiniz widget’ları kaldırın.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Premium hangi özellikleri kapsıyor?</h3>
+        <p>Gelişmiş haftalık karşılaştırmalar, doktor görüşmesi için PDF özet, birden fazla bebek profili, uyku penceresi hatırlatıcısı, hatıra yıldönümü bildirimleri ve ek paylaşım şablonları Premium kapsamındadır. Uyku penceresi tahmini, WHO persentil bantları ve geçmiş kayıtlara erişim abonelik gerektirmez. Güncel plan, fiyat ve varsa uygun deneme koşulları satın alma ekranında gösterilir.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Aboneliğimi nasıl iptal eder veya iade isterim?</h3>
+        <p><strong>iPhone Ayarları → [adınız] → Abonelikler → Kucak</strong> yolunu izleyin. Denemenin yenilenmesini istemiyorsanız bitişinden en az 24 saat önce iptal edin. Ücretli dönem erişimi ve deneme bitişi Apple’ın gösterdiği koşullara tabidir. Uygulamayı kaldırmak veya verileri silmek aboneliği iptal etmez. <a href="https://support.apple.com/tr-tr/118428">Apple’ın iptal yönergeleri</a> · <a href="https://reportaproblem.apple.com/">İade talebi</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Satın alımımı nasıl geri yüklerim?</h3>
+        <p>Satın alımın yapıldığı Apple Hesabı ile App Store’a giriş yaptığınızdan emin olun. Kucak’ta <strong>Ayarlar → Satın alımları geri yükle</strong> seçeneğine dokunun. Aktif abonelik hâlâ doğrulanamıyorsa bağlantınızı ve Apple abonelik durumunu kontrol edip bize yazın. Uygulama hesabınızı veya bakım kayıtlarınızı silmeniz gerekmez.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>İçerikler ve tahminler tıbbi tavsiye midir?</h3>
+        <p>Kucak kişisel bir bakım günlüğüdür. Yaşa göre bilgiler, uyku penceresi, büyüme eğrileri ve aşı tarihleri genel referans niteliğindedir. İlaç özelliği girdiğiniz planı hatırlatır; doz hesaplamaz veya önermez. Sağlık kararları için çocuk doktorunuza başvurun. Kaynak bağlantıları ilgili içerik ekranlarında yer alır.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Bir hata veya özellik önerisini nasıl iletirim?</h3>
+        <p>Sorunun oluştuğu adımları, beklenen sonucu, cihaz ve sürüm bilgilerini <a href="mailto:bayrambas255@icloud.com?subject=Kucak%20Geri%20Bildirim">e-postayla gönderin</a>. Destek mesajı ve gönüllü eklediğiniz dosyalar bize ulaşır; bakım kayıtlarınıza kendiliğinden erişemeyiz.</p>
       </div>
     </section>
 
@@ -235,13 +290,14 @@
       <div class="legal-links">
         <a href="privacy.html">Gizlilik Politikası</a>
         <a href="terms.html">Kullanım Şartları</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standart EULA</a>
       </div>
     </section>
 
     <footer>
       © <span id="year">2026</span> Kucak · <a href="mailto:bayrambas255@icloud.com">bayrambas255@icloud.com</a>
     </footer>
-  </div>
+  </main>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
